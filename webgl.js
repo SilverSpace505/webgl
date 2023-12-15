@@ -105,6 +105,10 @@ class Webgl {
 
 		this.modelBuffer = gl.createBuffer()
 	}
+	setup(id="glcanvas") {
+        window.canvas = document.getElementById(id)
+        window.ctx = window.canvas.getContext("webgl2")
+    }
 
 	sortObjs() {
 		this.meshes.sort((a, b) => a.rOrder - b.rOrder)
